@@ -24,61 +24,55 @@
 
 <div class="csat-card" id="formContainer">
     <img src="logo.png" alt="King Star Colchões" class="logo">
-    <h2>Como foi seu atendimento?</h2>
-    <p>Sua opinião é fundamental para nós!</p>
-
-    <div id="ratingList">
-        <label class="option"><input type="radio" name="nota" value="5"> 5 - Muito Satisfeito</label>
-        <label class="option"><input type="radio" name="nota" value="4"> 4 - Satisfeito</label>
-        <label class="option"><input type="radio" name="nota" value="3"> 3 - Indiferente</label>
-        <label class="option"><input type="radio" name="nota" value="2"> 2 - Insatisfeito</label>
-        <label class="option"><input type="radio" name="nota" value="1"> 1 - Muito Insatisfeito</label>
+    <div id="content">
+        <h2>Como foi seu atendimento?</h2>
+        <p>Sua opinião é fundamental para nós!</p>
+        <div id="ratingList">
+            <label class="option"><input type="radio" name="nota" value="5"> 5 - Muito Satisfeito</label>
+            <label class="option"><input type="radio" name="nota" value="4"> 4 - Satisfeito</label>
+            <label class="option"><input type="radio" name="nota" value="3"> 3 - Indiferente</label>
+            <label class="option"><input type="radio" name="nota" value="2"> 2 - Insatisfeito</label>
+            <label class="option"><input type="radio" name="nota" value="1"> 1 - Muito Insatisfeito</label>
+        </div>
+        <button id="btnEnviar">Enviar Avaliação</button>
     </div>
-
-    <button id="btnEnviar">Enviar Avaliação</button>
     <div id="sucesso">Obrigado! Sua nota foi registrada com sucesso.</div>
 </div>
 
 <script>
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxvsOa9cwjw4gkUYFbPMlar_w5pa1kgWnSYz3JIbpUjGAKVh940PEpoQ0Pk4AGhovmm4Q/exec";
+const GOOGLE_URL = "https://script.google.com/macros/s/AKfycbxvsOa9cwjw4gkUYFbPMlar_w5pa1kgWnSYz3JIbpUjGAKVh940PEpoQ0Pk4AGhovmm4Q/exec";
+const SEC_TOKEN = "KS_PRO_2026_SECURE"; // Deve ser igual ao que está no Google
 
 document.getElementById('btnEnviar').addEventListener('click', function() {
     const selecionada = document.querySelector('input[name="nota"]:checked');
-    const btn = document.getElementById('btnEnviar');
+    const btn = this;
 
     if (!selecionada) return alert("Por favor, selecione uma nota.");
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const ticketId = urlParams.get('id');
-
-    if (!ticketId) return alert("Erro: ID do ticket não encontrado.");
+    const ticketId = new URLSearchParams(window.location.search).get('id');
+    if (!ticketId) return alert("Erro crítico: ID do ticket ausente.");
 
     btn.disabled = true;
     btn.innerText = "Enviando...";
 
-    const payload = {
-        "tickets": [{
-            "id": ticketId,
-            "custom_fields": [{"id": 39182752125335, "value": parseInt(selecionada.value)}]
-        }]
+    // Enviamos um objeto simples que o Google vai validar
+    const data = {
+        security_token: SEC_TOKEN,
+        ticket_id: ticketId,
+        nota: selecionada.value
     };
 
-    // Chamada para a ponte do Google (Bypassa o CORS)
-    fetch(GOOGLE_SCRIPT_URL, {
+    fetch(GOOGLE_URL, {
         method: 'POST',
-        mode: 'no-cors', // Essencial para evitar o erro de CORS do navegador
-        body: JSON.stringify(payload)
+        mode: 'no-cors',
+        body: JSON.stringify(data)
     })
     .then(() => {
-        // Como usamos 'no-cors', o navegador não lê a resposta, então exibimos sucesso direto
-        document.getElementById('ratingList').style.display = 'none';
-        btn.style.display = 'none';
+        document.getElementById('content').style.display = 'none';
         document.getElementById('sucesso').style.display = 'block';
-        document.querySelector('h2').style.display = 'none';
-        document.querySelector('p').style.display = 'none';
     })
-    .catch(err => {
-        alert("Erro ao enviar. Tente novamente.");
+    .catch(() => {
+        alert("Erro de conexão. Tente novamente.");
         btn.disabled = false;
         btn.innerText = "Enviar Avaliação";
     });
