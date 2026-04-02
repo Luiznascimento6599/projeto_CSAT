@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avaliação de Atendimento</title>
-    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="icon" type="image/png" href="assets/logo.png.png">
 
     <style>
         /* 1. PREVENÇÃO DE GLITCH: O formulário começa escondido */
@@ -166,9 +166,10 @@
             if (!selecionada) return alert("Por favor, selecione uma nota.");
 
             const urlParams = new URLSearchParams(window.location.search);
-            const ticketId = urlParams.get('id');
+            // Tenta pegar o ID da URL. Se não tiver, usa "TESTE-123 apenas para fins de teste da página"
+            const ticketId = urlParams.get('id') || "TESTE-123"; 
 
-            if (!ticketId) return alert("Erro: ID do ticket ausente.");
+            if (!ticketId) return alert("Erro: ID do ticket ausente."); // Essa linha agora nunca vai disparar o erro
 
             btn.disabled = true;
             btn.innerText = "Enviando...";
