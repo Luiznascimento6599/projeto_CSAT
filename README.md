@@ -1,4 +1,4 @@
-# Estudo de Caso: Automação e Integridade de Dados - Pesquisa CSAT (CX)
+# Projeto: Automação e Integridade de Dados - Pesquisa CSAT (CX)
 
 ### Visão Geral do Projeto
 Na **King Star Colchões**, havia a necessidade de automatizar a coleta de satisfação (CSAT) após o atendimento no Zendesk, garantindo que os dados fossem auditáveis e imunes a tentativas de autoavaliação por parte dos colaboradores.
