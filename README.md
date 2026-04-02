@@ -21,10 +21,25 @@ O objetivo principal foi criar um fluxo automatizado e seguro que garantisse a i
 ## 🏗️ Arquitetura da Solução
 O projeto foi dividido em **4 fases críticas** para garantir que o dado saia do cliente e chegue ao relatório de forma limpa:
 
-1. **Disparo (Zendesk):** O fluxo inicia com uma macro que prepara o ticket (`tag: csat_enviada`), muda o status para "**Resolvido**" e gera um link único contendo o ID do ticket.
-2. **Interface de Coleta (GitHub):** Uma página web leve, hospedada no GitHub, captura o ID do ticket via URL e apresenta uma escala de 1 a 5 para o cliente.
-3. **Integração e Inteligência (Apps Script):** O motor recebe a nota via POST, autentica-se na API do Zendesk e realiza a gravação no campo customizado "**Nota CSAT**".
-4. **Fechamento de Ciclo:** Um gatilho final no Zendesk identifica a nota, mudando o status do ticket de "**Resolvido**" para "**Fechado**" instantaneamente.
+### 1. Disparo (Zendesk)
+O fluxo inicia com uma macro que prepara o ticket (`tag: csat_enviada`), muda o status para "**Resolvido**" e gera um link único contendo o ID do ticket.
+
+![Gatilho CSAT Enviada](./zendesk/prints/Gatilho%20CSAT%20Enviada.png)
+
+### 2. Interface de Coleta (GitHub)
+Uma página web leve, hospedada no GitHub, captura o ID do ticket via URL e apresenta uma escala de 1 a 5 para o cliente.
+
+![Formulário de Pesquisa](./zendesk/prints/Formulário%20de%20pesquisa.png) 
+
+### 3. Integração e Inteligência (Apps Script)
+O motor recebe a nota via POST, autentica-se na API do Zendesk e realiza a gravação no campo customizado "**Nota CSAT**".
+
+![Nota recebida e Gravada](./zendesk/prints/Nota%20recebida%20e%20Gravada.png)
+
+### 4. Fechamento de Ciclo
+Um gatilho final no Zendesk identifica a nota, mudando o status do ticket de "**Resolvido**" para "**Fechado**" instantaneamente.
+
+![Gatilho Encerrar](./zendesk/prints/Gatilho%20Encerrar%20após%20receber%20a%20Resposta%20CSAT.png)
 
 ---
 
