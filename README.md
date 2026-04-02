@@ -1,7 +1,7 @@
 # Projeto Pesquisa CSAT (CX): Criação, Automação e Integridade de Dados
 
 ### Visão Geral do Projeto
-Desenvolvimento de uma solução integrada de coleta CSAT (escala 1 a 5) para a King Star Colchões, superando a limitação nativa do Zendesk. O projeto foca na automação do fechamento de tickets e na blindagem dos dados contra autoavaliações, garantindo métricas de satisfação precisas, seguras e auditáveis."
+Desenvolvimento de uma solução integrada de coleta CSAT (escala 1 a 5) para a King Star Colchões, superando a limitação nativa do Zendesk. O projeto foca na automação do fechamento de tickets e na blindagem dos dados contra autoavaliações, garantindo métricas de satisfação precisas, seguras e auditáveis.
 
 ---
 
