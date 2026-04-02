@@ -165,7 +165,7 @@
             if (!selecionada) return alert("Por favor, selecione uma nota.");
 
             const urlParams = new URLSearchParams(window.location.search);
-            const ticketId = urlParams.get('id') || "TESTE-123"; 
+            const ticketId = urlParams.get('id') || "TESTE-123"; // Tenta pegar o ID da URL. Se não tiver, usa "TESTE-123" apenas para ver o funcionamento do formulário.
 
             // Se o ticketId for preenchido com o teste acima, ele NUNCA vai entrar nesse IF.
             if (!ticketId) {
