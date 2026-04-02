@@ -10,7 +10,7 @@ Este projeto consiste na implantação de um sistema automatizado para coleta, v
 O fluxo automatiza a jornada da pesquisa desde o envio do link pelo atendente até o encerramento definitivo do chamado. O diferencial desta solução é a camada de segurança, que utiliza bloqueios de IP e verificações de sistema para impedir autoavaliações ou fraudes internas.
 
 * **Responsável:** Luiz Torres Nascimento
-* **Contato:** [luiz.nascimento@kingstarcolchoes.com.br](mailto:luiz.nascimento@kingstarcolchoes.com.br)
+* **Contato:** [luiznascimento6599@gmail.com](mailto:luiznascimento6599@gmail.com)
 
 ---
 
