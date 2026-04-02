@@ -1,0 +1,50 @@
+Case Study: Automação e Integridade de Dados - Pesquisa CSAT (CX)
+🎯 O Desafio
+Na King Star Colchões, havia a necessidade de automatizar a coleta de satisfação (CSAT) após o atendimento no Zendesk, garantindo que os dados fossem auditáveis e imunes a tentativas de autoavaliação por parte dos colaboradores.
+
+🛠️ Tecnologias Utilizadas
+Zendesk API: Gestão de tickets e triggers.
+
+GitHub: Hospedagem do Front-end da pesquisa.
+
+Google Apps Script: Motor de integração (Backend) e processamento via POST.
+
+JavaScript: Lógica de captura de parâmetros e validação de segurança.
+
+🏗️ Arquitetura da Solução
+O projeto foi dividido em 4 fases críticas para garantir que o dado saia do cliente e chegue ao relatório de forma limpa:
+
+1. Disparo (Zendesk)
+O fluxo inicia com uma macro que prepara o ticket (tag: csat_enviada), muda o status para "Resolvido" e gera um link único contendo o ID do ticket.
+
+2. Interface de Coleta (GitHub)
+Uma página web leve, hospedada no GitHub, captura o ID do ticket via URL e apresenta uma escala de 1 a 5.
+
+3. Integração e Inteligência (Apps Script)
+O motor recebe a nota, autentica-se via API no Zendesk e realiza a gravação no campo customizado Nota CSAT.
+
+4. Fechamento de Ciclo
+Um gatilho final no Zendesk identifica a nota, mudando o status de "Resolvido" para "Fechado" instantaneamente.
+
+🛡️ Camadas de Segurança e Auditoria
+Como analista, foquei na integridade do dado. Implementei três travas de segurança:
+
+Geofencing de IP: Bloqueio automático de qualquer acesso originado da rede interna ou Wi-Fi corporativo da empresa.
+
+Validação de Referer: Identificação de redirecionamentos suspeitos vindos da interface do agente.
+
+Log de Fraude: Tentativas indevidas são registradas para auditoria da equipe de Qualidade.
+
+📈 Resultados Obtidos
+Eficiência Operacional: Eliminação do processo manual de fechamento de tickets após a pesquisa.
+
+Qualidade dos Dados: Redução a zero de avaliações fraudulentas ou internas.
+
+Governança: Acesso restrito às notas apenas para liderança e time de Qualidade.
+
+🖇️ Links e Contato
+Repositório: KING-STAR-COLCHOES/pesquisa-satisfacao
+
+Autor: Luiz Torres Nascimento
+
+LinkedIn: https://www.linkedin.com/in/luiz-nascimento-52103322a/
