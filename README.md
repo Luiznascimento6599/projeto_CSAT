@@ -32,7 +32,7 @@ O objetivo principal foi criar um fluxo automatizado e seguro que garantisse a i
     └── assets/
         └── logo.png
 
----
+```
 
 ## 🏗️ Arquitetura da Solução
 O projeto foi dividido em **4 fases críticas** para garantir que o dado saia do cliente e chegue ao relatório de forma limpa:
