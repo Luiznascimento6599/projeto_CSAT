@@ -24,22 +24,22 @@ O projeto foi dividido em **4 fases críticas** para garantir que o dado saia do
 ### 1. Disparo (Zendesk)
 O fluxo inicia com uma macro que prepara o ticket (`tag: csat_enviada`), muda o status para "**Resolvido**" e gera um link único contendo o ID do ticket.
 
-![Gatilho CSAT Enviada](./Images/prints/Gatilho%20CSAT%20Enviada.png)
+![Gatilho CSAT Enviada](./fotos/Gatilho%20CSAT%20Enviada.png)
 
 ### 2. Interface de Coleta (GitHub)
 Uma página web leve, hospedada no GitHub, captura o ID do ticket via URL e apresenta uma escala de 1 a 5 para o cliente.
 
-![Formulário de Pesquisa](./Images/prints/Formulário%20de%20pesquisa.png) 
+![Formulário de Pesquisa](./fotos/Formulário%20de%20pesquisa.png) 
 
 ### 3. Integração e Inteligência (Apps Script)
 O motor recebe a nota via POST, autentica-se na API do Zendesk e realiza a gravação no campo customizado "**Nota CSAT**".
 
-![Nota recebida e Gravada](./Images/prints/Nota%20recebida%20e%20Gravada.png)
+![Nota recebida e Gravada](./fotos/Nota%20recebida%20e%20Gravada.png)
 
 ### 4. Fechamento de Ciclo
 Um gatilho final no Zendesk identifica a nota, mudando o status do ticket de "**Resolvido**" para "**Fechado**" instantaneamente.
 
-![Gatilho Encerrar](./Images/prints/Gatilho%20Encerrar%20após%20receber%20a%20Resposta%20CSAT.png)
+![Gatilho Encerrar](./fotos/Gatilho%20Encerrar%20após%20receber%20a%20Resposta%20CSAT.png)
 
 ---
 
