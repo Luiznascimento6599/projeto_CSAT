@@ -60,6 +60,13 @@ Como analista, foquei na integridade do dado. Implementei três travas de segura
 
   ---
 
+  ## 🔗 Links e Contato
+- **Repositório:** `Luiznascimento6599/projeto_CSAT`
+- **Autor:** Luiz Torres Nascimento
+- **LinkedIn:** [Luiz Torres Nascimento](https://www.linkedin.com/in/luiz-nascimento-52103322a/)
+- **Site do Projeto:** <a href="https://luiznascimento6599.github.io/projeto_CSAT/frontend/" target="_blank" rel="noopener noreferrer">Clique aqui para testar o formulário</a>
+
+
   ### 📂 Estrutura do Projeto
 
 ```text
@@ -75,8 +82,3 @@ Como analista, foquei na integridade do dado. Implementei três travas de segura
         └── logo.png
 
 
-## 🔗 Links e Contato
-- **Repositório:** `Luiznascimento6599/projeto_CSAT`
-- **Autor:** Luiz Torres Nascimento
-- **LinkedIn:** [Luiz Torres Nascimento](https://www.linkedin.com/in/luiz-nascimento-52103322a/)
-- **Site do Projeto:** <a href="https://luiznascimento6599.github.io/projeto_CSAT/frontend/" target="_blank" rel="noopener noreferrer">Clique aqui para testar o formulário</a>
