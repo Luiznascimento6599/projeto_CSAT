@@ -38,8 +38,9 @@ Como analista, foquei na integridade do dado. Implementei três travas de segura
 ---
 
 ## ✅ Resultados Obtidos
+- **Inteligência de Negócio (Data-Driven):** A viabilização da coleta efetiva das notas (escala de 1 a 5) permitiu à empresa mensurar a real satisfação dos clientes, destravando a capacidade da gestão de avaliar cenários e tomar decisões estratégicas baseadas em dados concretos.
 - **Eficiência Operacional:** Eliminação total do processo manual de fechamento de tickets após o envio da pesquisa.
-- **Qualidade dos Dados:** Redução a zero de avaliações fraudulentas ou internas, garantindo a veracidade das métricas.
+- **Qualidade dos Dados:** Redução a zero de avaliações fraudulentas ou internas, garantindo a total veracidade das métricas coletadas.
 - **Governança:** Acesso restrito às notas apenas para a liderança e o time de Qualidade.
 
 ---
