@@ -58,6 +58,21 @@ Como analista, foquei na integridade do dado. Implementei três travas de segura
 - **Qualidade dos Dados:** Redução a zero de avaliações fraudulentas ou internas, garantindo a total veracidade das métricas coletadas.
 - **Governança:** Acesso restrito às notas apenas para a liderança e o time de Qualidade.
 
+  ---
+
+  ### 📂 Estrutura do Projeto
+
+```text
+/projeto_CSAT
+├── README.md
+├── /backend
+│   └── apps_script.gs
+├── /fotos
+│   └── (Prints do sistema e configurações)
+└── /frontend
+    ├── index.html
+    └── assets/
+        └── logo.png
 ---
 
 ## 🔗 Links e Contato
