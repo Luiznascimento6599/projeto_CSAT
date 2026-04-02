@@ -18,6 +18,22 @@ O objetivo principal foi criar um fluxo automatizado e seguro que garantisse a i
 
 ---
 
+  ### 📂 Estrutura do Projeto
+
+```text
+/projeto_CSAT
+├── README.md
+├── /backend
+│   └── apps_script.gs
+├── /fotos
+│   └── (Prints do sistema e configurações)
+└── /frontend
+    ├── index.html
+    └── assets/
+        └── logo.png
+
+---
+
 ## 🏗️ Arquitetura da Solução
 O projeto foi dividido em **4 fases críticas** para garantir que o dado saia do cliente e chegue ao relatório de forma limpa:
 
@@ -65,21 +81,4 @@ Como analista, foquei na integridade do dado. Implementei três travas de segura
 - **Autor:** Luiz Torres Nascimento
 - **LinkedIn:** [Luiz Torres Nascimento](https://www.linkedin.com/in/luiz-nascimento-52103322a/)
 - **Teste do Projeto:** <a href="https://luiznascimento6599.github.io/projeto_CSAT/frontend/" target="_blank" rel="noopener noreferrer">Clique aqui para testar o formulário</a>
-
----
-
-  ### 📂 Estrutura do Projeto
-
-```text
-/projeto_CSAT
-├── README.md
-├── /backend
-│   └── apps_script.gs
-├── /fotos
-│   └── (Prints do sistema e configurações)
-└── /frontend
-    ├── index.html
-    └── assets/
-        └── logo.png
-
 
