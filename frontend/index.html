@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avaliação de Atendimento</title>
-    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="icon" type="image/png" href="assets/logo.png">
 
     <style>
         /* 1. PREVENÇÃO DE GLITCH: O formulário começa escondido */
@@ -83,7 +83,7 @@
 <body>
 
     <div class="csat-card" id="formContainer">
-        <img src="logo.png" alt="Minha Empresa" class="logo">
+        <img src="assets/logo.png" alt="Minha Empresa" class="logo">
         
         <div id="content">
             <h2>Como foi seu atendimento?</h2>
@@ -104,7 +104,8 @@
     </div>
 
     <script>
-        'async function validarSeguranca() {
+        // Aspa simples que estava causando erro de sintaxe foi removida na linha abaixo
+        async function validarSeguranca() {
             const dominioProibido = "kingstarcolchoessupport.zendesk.com";
             const ipProibido = "200.155.141.154"; 
 
