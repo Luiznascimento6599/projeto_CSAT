@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avaliação de Atendimento</title>
-    <link rel="icon" type="image/png" href="assets/logo.png.png">
+    <link rel="icon" type="image/png" href="assets/logo.png">
 
     <style>
         /* 1. PREVENÇÃO DE GLITCH: O formulário começa escondido */
@@ -104,7 +104,6 @@
     </div>
 
     <script>
-        // Aspa simples que estava causando erro de sintaxe foi removida na linha abaixo
         async function validarSeguranca() {
             const dominioProibido = "kingstarcolchoessupport.zendesk.com";
             const ipProibido = "200.155.141.154"; 
@@ -166,10 +165,12 @@
             if (!selecionada) return alert("Por favor, selecione uma nota.");
 
             const urlParams = new URLSearchParams(window.location.search);
-            // Tenta pegar o ID da URL. Se não tiver, usa "TESTE-123 apenas para fins de teste da página"
             const ticketId = urlParams.get('id') || "TESTE-123"; 
 
-            if (!ticketId) return alert("Erro: ID do ticket ausente."); // Essa linha agora nunca vai disparar o erro
+            // Se o ticketId for preenchido com o teste acima, ele NUNCA vai entrar nesse IF.
+            if (!ticketId) {
+                return alert("Erro: ID do ticket ausente."); 
+            }
 
             btn.disabled = true;
             btn.innerText = "Enviando...";
